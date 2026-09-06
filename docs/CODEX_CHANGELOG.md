@@ -14,6 +14,27 @@ Format:
 - Notes: ...
 ```
 
+## 2026-09-06 - Search-intent Service and Custom hub rebuild
+
+- Commit: `42c51732`
+- Changed: Replaced the four-language Service and Custom hubs with the two
+  approved Markdown sources through one shared renderer, including six-item
+  FAQ graphs, localized lead CTAs and all 14 registered Custom-project links.
+  Updated the four Pricing page heads/H1s for 2026, refined only the four tyre
+  metadata descriptions, retired the obsolete hub i18n path and bumped the
+  common asset cache key to `20260906a`.
+- Verified: Both repository content files match their amended approved SHA-256
+  values. The focused hub validator, all four site validator groups, hero
+  preload checks, zero-broken-link crawl and a post-commit Full Safe Rebuild
+  passed. Pages run `34060700603` deployed the implementation; live checks
+  returned HTTP 200, exact repository output and zero responsive overflow.
+  Google Rich Results results `ICpuxGmwcmItgg35JinkCg` and
+  `xR2ntFNq3QrtmJfydF3OeA` each reported three valid items and no errors.
+- Notes: Exactly 12 sitemap dates moved: the eight rebuilt hubs and four
+  Pricing pages. The four tyre dates and all other existing dates stayed
+  unchanged. PDFs were intentionally skipped under the task brief. Full
+  evidence is in `docs/reports/S_REBUILD_W1_REPORT.md`.
+
 ## 2026-09-02 - Private lead measurement
 
 - Commit: `fae3a7ce`

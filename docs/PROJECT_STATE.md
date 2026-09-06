@@ -1,6 +1,6 @@
 # Iron Custom Motors Website: Project State
 
-Last updated: 2026-09-02
+Last updated: 2026-09-06
 
 This is the only documentation file that owns current inventories, counts,
 deployed public identifiers and cache-bust values. Operating rules live in
@@ -10,8 +10,9 @@ deployed public identifiers and cache-bust values. Operating rules live in
 ## Status And Evidence
 
 - Status: **confirmed** for the deployed site and both Worker services.
-- Evidence date: 2026-09-02 (Europe/Lisbon).
-- Repository evidence: A-MEASURE commits `fae3a7ce`, `173d62e1` and
+- Evidence date: 2026-09-06 (Europe/Lisbon).
+- Repository evidence: S-REBUILD-W1 implementation commit `42c51732`,
+  A-MEASURE commits `fae3a7ce`, `173d62e1` and
   `a286b68a`, M-REPO commits `88a44503` and `599a0429`, automated
   review-snapshot refresh commit `6f28a412`, N-BBQ implementation commit
   `f4d4dd07` and merged deployment state `93b4f460`, the automated
@@ -34,7 +35,14 @@ deployed public identifiers and cache-bust values. Operating rules live in
 - Inventory method: import the maintained Python registries, parse
   `sitemap.xml`, and enumerate tracked `*.html` files.
 - Cache-bust method: scan asset references in every sitemap HTML file.
-- Production evidence: A-MEASURE GitHub Pages workflows `33665877221` and
+- Production evidence: S-REBUILD-W1 GitHub Pages workflow `34060700603`,
+  cache-bypass checks on all eight rebuilt Service/Custom hubs, four Pricing
+  pages, four tyre-service pages, `llms.txt` and `sitemap.xml`; responsive
+  browser checks at 390 px and 1440 px found zero document overflow and one
+  responsive CSS hero candidate. Google Rich Results results
+  `ICpuxGmwcmItgg35JinkCg` for EN Service and
+  `xR2ntFNq3QrtmJfydF3OeA` for PT Custom each reported three valid items and
+  no errors. A-MEASURE GitHub Pages workflows `33665877221` and
   `33666134112`, production HTTP checks on all four noindex thank-you pages,
   all four localized contact forms, the shared JavaScript and `sitemap.xml`,
   and browser checks of all four event types and all four WhatsApp languages.
@@ -80,12 +88,12 @@ deployed public identifiers and cache-bust values. Operating rules live in
   byte-identical production project CSS and sitemap, and Google Rich Results
   result `QtK8FJYbOvDZFu-k-TWBng` with four valid items, no errors and no
   warnings. Earlier evidence remains in the task reports and changelog.
-- Reproducibility evidence: the documented Full Safe Rebuild and all four
-  validator groups passed in a full-history clean clone from the canonical
-  GitHub URL at A-MEASURE state `a286b68a`, leaving empty
-  `git status --short`; verified 2026-09-02. The current
+- Reproducibility evidence: the documented Full Safe Rebuild with the PDF step
+  intentionally skipped and all four validator groups passed after
+  S-REBUILD-W1 commit `42c51732`, leaving empty `git status --short`; verified
+  2026-09-06. The current
   `sitemap.xml` SHA-256 is
-  `4ef974f467c30c2e67efe7e276dbb6b03f93efd87959a3e72d7178673a9c31ae`.
+  `52aead525994703b941a5cca0f5dd94bc9589b651267a500fda767bf7e331956`.
   The earlier repository audit baseline was documentation commit `d08a3297`.
 - A-MEASURE evidence: the owner authorized Cloudflare deployment and completed
   Wrangler OAuth for the Vg account on 2026-09-02. `icm-leads` is deployed with
@@ -132,7 +140,7 @@ repository URL currently redirects, but it is not a supported canonical URL.
 | Indexable HTML files | 236 | sitemap-to-file resolution |
 | Non-indexed HTML files | 13 | `404.html`, 8 localized project redirect stubs and 4 `thank-you` pages |
 | Sitemap lastmod tags | 236 | parsed `sitemap.xml` |
-| Unique sitemap lastmod values | 56 | parsed `sitemap.xml` |
+| Unique sitemap lastmod values | 58 | parsed `sitemap.xml` |
 | Registered brand service pages | 7 | `BRAND_ORDER` / `BRAND_CONFIG` |
 | Project detail pages | 14 | `PROJECT_TILES` |
 | Data-driven project definitions | 14 | `PROJECT_CONFIGS` |
@@ -159,7 +167,7 @@ Registry alignment on the evidence date:
 |---|---:|---|
 | `build_sitemap.py` `PAGES` | 59 | canonical English indexable paths |
 | `localize_internal_links.py` `LOCALIZED_PATHS` | 59 | matches `PAGES` after normalization |
-| `build_i18n.py` `MAIN_PAGES` | 35 | English sources localized by the generic i18n flow |
+| `build_i18n.py` `MAIN_PAGES` | 33 | English sources localized by the generic i18n flow |
 | `project_pages_data.py` `PROJECT_CONFIGS` | 14 | project details rendered directly in four languages |
 
 There is no active `EN_PAGES` registry. The canonical English page registry is
@@ -169,7 +177,7 @@ There is no active `EN_PAGES` registry. The canonical English page registry is
 
 | Assets | Value | Scope |
 |---|---|---|
-| `assets/main.css`, `assets/main.js` | `20260902b` | every sitemap page |
+| `assets/main.css`, `assets/main.js` | `20260906a` | every sitemap page |
 | `assets/projects.css` | `20260801a` | project detail pages |
 | `assets/projects.js` | `20260710b` | project detail pages |
 
@@ -189,6 +197,16 @@ asset must use one value site-wide. Change a value only when that asset changes.
 
 The expat workshop page is intentionally footer-only and contextual-link-only;
 it is not a top-navigation item.
+
+The Service and Custom hubs are copy-driven four-language families owned by
+`scripts/build/content/service_hub_copy_4lang.md`,
+`scripts/build/content/custom_hub_copy_4lang.md` and the shared
+`build_service_custom_hubs.py` renderer. Their current pages use distinct
+search-intent H1s, six source-matched FAQ items, localized lead CTAs and the
+`Service`/`FAQPage`/`BreadcrumbList` graph. The Custom hub lists all 14
+registered projects in `PROJECT_TILES` order. Pricing titles, descriptions,
+eyebrows and H1s identify the 2026 price list; the tyre-service family received
+metadata-only refinements with unchanged visible content.
 
 ### Harley Hub
 
@@ -277,10 +295,10 @@ The same redirect relationship exists under `/ru/`, `/uk/` and `/pt/`.
 
 ## Current Delivery And Discovery State
 
-- All 128 pages that contain the lead form submit to FormSubmit through the
+- All 136 pages that contain the lead form submit to FormSubmit through the
   activated private action alias. No built HTML exposes the delivery inbox in
   a FormSubmit action, and the SEO validator enforces this contract across all
-  built HTML files, including non-sitemap output. The 124 indexable form pages
+  built HTML files, including non-sitemap output. The 132 indexable form pages
   redirect to their language-local noindex `thank-you` page; those four utility
   pages contain the same shared modal and remain outside `sitemap.xml`.
 - A-MEASURE's checked-in client sends only four anonymous lead-intent types:
