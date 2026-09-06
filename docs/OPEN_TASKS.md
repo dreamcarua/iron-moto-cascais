@@ -1,6 +1,6 @@
 # Open Tasks, Risks And Watchlist
 
-Last updated: 2026-09-02
+Last updated: 2026-09-06
 
 This file owns unresolved work, external dependencies and access requirements.
 Statuses use the labels defined in the `AGENTS.md` documentation protocol.
@@ -94,6 +94,18 @@ Do not claim an account-only verification passed unless it was actually run.
 Local JSON-LD parsing and repository validators are separate evidence.
 
 ## Product And Publishing Watchlist
+
+### Recheck the literal hub rating when the review snapshot changes
+
+- Status: **confirmed periodic check**.
+- Evidence: the approved Service and Custom hub copy says the workshop is
+  rated `5.0` on Google, while the live aggregate rating is owned by
+  `assets/reviews-snapshot.json`.
+- Trigger: whenever a review refresh changes `rating`, compare the new snapshot
+  value with the literal hub copy before publishing the refresh.
+- Action: if the values differ, obtain owner-approved four-language wording and
+  update both hub copy sources through their documented workflow. Do not add a
+  hard-coded review count.
 
 ### The First historical result and current whereabouts
 

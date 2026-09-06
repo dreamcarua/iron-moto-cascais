@@ -623,6 +623,7 @@ PROJECT_CONFIGS = {
         "source_format": "localized_html",
         "published_iso": "2026-05-05T21:37:36+02:00",
         "modified_iso": LEGACY_PROJECT_DATES[slug],
+        "integrations": {"custom": True},
     }
     for slug in LEGACY_PROJECT_ORDER
 }
@@ -632,6 +633,8 @@ PROJECT_CONFIGS.update(MARKDOWN_PROJECT_CONFIGS)
 for _markdown_project in MARKDOWN_PROJECT_CONFIGS.values():
     _markdown_project["source_format"] = "markdown"
     _markdown_project.setdefault("modified_iso", _markdown_project["published_iso"])
+for _project_config in PROJECT_CONFIGS.values():
+    _project_config.setdefault("integrations", {})["custom"] = True
 PROJECT_CONFIGS["fighter"]["visible_text_sha256"] = {
     "en": "3a105c2135bad232b2d6e01b8cdb83686f7c87b1a4fefcf3e69b74d899bc9395",
     "ru": "725b26e490480f786b929fc893853f41ad33b6642aca888af32231db2f543b53",

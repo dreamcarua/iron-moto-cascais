@@ -7,7 +7,7 @@ Facts: 10–30" / up to 400mm · no brake-disc/hub removal · balance any wheel 
 ## ENGLISH
 
 **SEO Title:** Motorcycle Tyre Fitting & Wheel Balancing | Cascais
-**Meta description:** Motorcycle-specific tyre fitting and wheel balancing in São Domingos de Rana, Cascais. Wheels up to 30" and 400 mm, spoked, vintage, Harley, custom. Book today.
+**Meta description:** Motorcycle tyre fitting and wheel balancing in Cascais: labour from 40 € per wheel, wheels up to 30" and 400 mm, spoked, vintage, Harley and custom.
 **H1:** Motorcycle Tyre Fitting & Wheel Balancing in Cascais
 
 **Hero intro:** Car tyre fitting is not motorcycle tyre fitting. A car shop is built for car wheels — different machines, different geometry, different risks. At Iron Custom Motors in São Domingos de Rana, Cascais, we run motorcycle-specific equipment that is unmatched in the region and built for moto wheels only. We fit tyres up to 30" rim and up to 400 mm width, and we balance any motorcycle wheel up to those limits — without removing your brake discs or hubs. Where engineering meets service, your wheels are handled by a true specialist, not adapted on car equipment.
@@ -57,7 +57,7 @@ Prices are labour only. Tyres are quoted separately. Message us on WhatsApp with
 ## PORTUGUÊS (pt-PT)
 
 **SEO Title:** Montagem de Pneus de Mota e Equilibragem | Cascais
-**Meta description:** Montagem de pneus de mota e equilibragem em São Domingos de Rana, Cascais. Jantes até 30" e 400 mm, raios, clássicas, Harley e custom. Marque já.
+**Meta description:** Montagem de pneus de mota e equilibragem em Cascais: mão de obra desde 40 € por roda, jantes até 30" e 400 mm, raios, clássicas, Harley e custom.
 **H1:** Montagem de Pneus de Mota e Equilibragem de Rodas em Cascais
 
 **Introdução (Hero):** Montar um pneu de carro não é montar um pneu de mota. Uma oficina de pneus de automóvel está concebida para rodas de carro — outras máquinas, outra geometria, outros riscos. Na Iron Custom Motors, em São Domingos de Rana, Cascais, trabalhamos com equipamento específico para motas, sem paralelo na região e feito exclusivamente para rodas de mota. Montamos pneus em jantes até 30" e até 400 mm de largura, e equilibramos qualquer roda de mota dentro desses limites — sem desmontar os discos de travão nem os cubos. É aqui que a engenharia encontra o serviço: as suas rodas são tratadas por um verdadeiro especialista, e não adaptadas em equipamento de automóvel.
@@ -107,7 +107,7 @@ Os preços referem-se apenas à mão de obra. Os pneus são orçamentados à par
 ## РУССКИЙ
 
 **SEO Title:** Шиномонтаж мотоциклов и балансировка | Кашкайш
-**Meta description:** Мотоциклетный шиномонтаж и балансировка в Сан-Домингуш-де-Рана, Кашкайш. Колёса до 30" и 400 мм, спицы, классика, Harley, кастом. Запишитесь сегодня.
+**Meta description:** Шиномонтаж мотоциклов и балансировка в Кашкайше: работа от 40 € за колесо, диски до 30" и 400 мм, спицы, классика, Harley и кастом. Любые бренды шин.
 **H1:** Шиномонтаж мотоциклов и балансировка колёс в Кашкайше
 
 **Hero:** Шиномонтаж легкового авто — это не шиномонтаж мотоцикла. Автосервис рассчитан на автомобильные колёса: другие станки, другая геометрия, другие риски. В Iron Custom Motors в Сан-Домингуш-де-Рана (Кашкайш) мы работаем на оборудовании специально для мотоциклов — не имеющем аналогов в регионе и созданном исключительно под мотоколёса. Мы монтируем шины на диски до 30" и шириной до 400 мм и балансируем любое мотоциклетное колесо в этих пределах — не снимая тормозные диски и ступицы. Здесь инженерия встречается с сервисом: ваши колёса обслуживает настоящий специалист, а не автосервис, подстраивающийся под мотоцикл.
@@ -157,7 +157,7 @@ Os preços referem-se apenas à mão de obra. Os pneus são orçamentados à par
 ## УКРАЇНСЬКА
 
 **SEO Title:** Шиномонтаж мотоциклів і балансування | Кашкайш
-**Meta description:** Мотоциклетний шиномонтаж і балансування в Сан-Домінгуш-де-Рана, Кашкайш. Колеса до 30" і 400 мм, спиці, класика, Harley, кастом. Запишіться сьогодні.
+**Meta description:** Шиномонтаж мотоциклів і балансування в Кашкайші: робота від 40 € за колесо, диски до 30" і 400 мм, спиці, класика, Harley і кастом. Будь-які бренди шин.
 **H1:** Шиномонтаж мотоциклів і балансування коліс у Кашкайші
 
 **Hero:** Шиномонтаж легкового авто — це не шиномонтаж мотоцикла. Автосервіс розрахований на автомобільні колеса: інші верстати, інша геометрія, інші ризики. У Iron Custom Motors у Сан-Домінгуш-де-Рана (Кашкайш) ми працюємо на обладнанні спеціально для мотоциклів — без аналогів у регіоні та створеному виключно під мотоколеса. Ми монтуємо шини на диски до 30" і завширшки до 400 мм та балансуємо будь-яке мотоциклетне колесо в цих межах — не знімаючи гальмівні диски та маточини. Тут інженерія зустрічається із сервісом: ваші колеса обслуговує справжній фахівець, а не автосервіс, що підлаштовується під мотоцикл.

@@ -16,7 +16,7 @@ from site_chrome import apply_navigation_footer
 
 SITE_ROOT = Path(__file__).resolve().parents[2]
 DOMAIN = "https://ironcustommotors.com"
-CACHE_BUST = "20260902b"
+CACHE_BUST = "20260906a"
 
 OG_LOCALES = {"en":"en_US","ru":"ru_RU","uk":"uk_UA","pt":"pt_PT"}
 LANGS = ["en", "ru", "uk", "pt"]
@@ -145,8 +145,14 @@ def build_page(slug, lang):
     upsert_meta(prop="og:type", content="website")
     upsert_meta(prop="og:url", content=f"{DOMAIN}/{slug}/" if lang=="en" else f"{DOMAIN}/{lang}/{slug}/")
     upsert_meta(prop="og:locale", content=OG_LOCALES[lang])
+    # Legal pages have no page-specific hero. Keep their social image stable
+    # instead of inheriting whichever page currently supplies the chrome shell.
+    upsert_meta(prop="og:image", content=f"{DOMAIN}/photos/og.jpg")
+    upsert_meta(prop="og:image:width", content="1200")
+    upsert_meta(prop="og:image:height", content="630")
     upsert_meta(name="twitter:title", content=head_meta["title"])
     upsert_meta(name="twitter:description", content=head_meta["description"])
+    upsert_meta(name="twitter:image", content=f"{DOMAIN}/photos/og.jpg")
     upsert_robots_image_preview(chrome)
 
     # Canonical

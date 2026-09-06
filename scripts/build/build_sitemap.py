@@ -205,7 +205,7 @@ def stable_attr_value(value):
     return str(value)
 
 
-def semantic_html(html):
+def semantic_html(html, include_head=True):
     soup = BeautifulSoup(html, HTML_PARSER)
     title = clean_text(soup.title.get_text(" ", strip=True)) if soup.title else ""
     description = ""
@@ -218,7 +218,7 @@ def semantic_html(html):
     for node in target.find_all(["script", "style"]):
         node.decompose()
 
-    pieces = [f"title:{title}", f"description:{description}"]
+    pieces = [f"title:{title}", f"description:{description}"] if include_head else []
     tracked_attrs = ("href", "src", "srcset", "alt", "title", "aria-label", "id")
     for node in target.descendants:
         if isinstance(node, NavigableString):
@@ -287,9 +287,17 @@ def lastmod_for(lang, path):
     rel_path = html_file.relative_to(SITE_ROOT).as_posix()
     head_html = git_file_at("HEAD", rel_path)
     if head_html:
-        current = semantic_html(html_file.read_text(encoding="utf-8"))
+        current_html = html_file.read_text(encoding="utf-8")
+        current = semantic_html(current_html)
+        committed = COMMITTED_LASTMOD_BY_URL.get(url_for(lang, path))
         if semantic_html(head_html) == current:
-            committed = COMMITTED_LASTMOD_BY_URL.get(url_for(lang, path))
+            if committed:
+                return committed
+        # Titles and descriptions affect discovery, but they do not change the
+        # user-visible page body. Preserve honest lastmod for head-only edits.
+        if semantic_html(head_html, include_head=False) == semantic_html(
+            current_html, include_head=False
+        ):
             if committed:
                 return committed
     if path in EXPLICIT_LASTMOD:

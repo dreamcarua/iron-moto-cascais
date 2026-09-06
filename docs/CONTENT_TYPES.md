@@ -65,6 +65,11 @@ Commands: `scripts/build/README.md`, **Brand page workflow**.
 Ownership:
 
 - General hubs: `new_pages_data.py` + `build_new_pages.py`.
+- Copy-driven Service/Custom hubs:
+  `content/service_hub_copy_4lang.md` and
+  `content/custom_hub_copy_4lang.md` +
+  `build_service_custom_hubs.py`; exact family checks live in
+  `validate_service_custom_hubs.py`.
 - Pre-purchase inspection:
   `content/pre_purchase_inspection_copy_4lang.md` +
   `build_pre_purchase_inspection.py`.
@@ -74,6 +79,22 @@ Ownership:
 - English-speaking expat hub: `content/expat_hub_copy_4lang.md` +
   `build_expat_hub.py`.
 - Shared commercial enhancements: `enhance_money_pages.py`.
+
+Stable Service/Custom hub rules:
+
+- Both hubs use the same parser and renderer and are rendered directly in all
+  four languages. They are not outputs of the generic `build_i18n.py` flow.
+- The approved copy owns each hub's local-area and related-path sections.
+  `enhance_money_pages.py` must not add either generic block to these pages.
+- Service price anchors must already exist in `pricing_data.py`; no new price
+  may be introduced only in hub copy. Custom-build prices are not published.
+- Project links come from all `PROJECT_CONFIGS` entries with
+  `integrations.custom`, in `PROJECT_TILES` order and with same-language URLs.
+- A literal Google rating may be used only without a hard-coded review count.
+  Recheck that literal when the review snapshot rating changes.
+- The confirmed custom-build policy is maintained in
+  [BUSINESS_FACTS.md](BUSINESS_FACTS.md#custom-build-policy); do not duplicate
+  it as a second documentation source.
 
 Schema normally follows `Service` + `FAQPage` + `BreadcrumbList`; collection
 hubs use the established collection pattern. Use the actual source family as
@@ -229,7 +250,7 @@ Stable rules:
   script. Listing and shared navigation membership come from `PROJECT_TILES`;
   sitemap and localized-path membership derive from `PROJECT_CONFIGS`.
 - A project with `integrations.custom` is added to the four `/custom/` pages by
-  `build_new_pages.py`; do not patch those generated pages manually. Harley
+  `build_service_custom_hubs.py`; do not patch those generated pages manually. Harley
   portfolio copy and order remain explicit in `harley_hub_data.py` because not
   every project is a Harley project. `validate_project_pages.py` enforces the
   declared Custom and Harley integrations.

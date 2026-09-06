@@ -98,6 +98,17 @@ that parser.
 }
 ```
 
+## Custom Build Policy
+
+The owner confirmed these facts on 2026-09-06:
+
+- The initial custom-project consultation is always free.
+- The workshop accepts custom builds as complete projects; it does not accept
+  standalone paint or wiring jobs. Electrical repairs on stock motorcycles
+  belong to the service workflow.
+- No prices are published for custom builds. Scope, budget and timeline are
+  agreed for each complete project after the free consultation.
+
 ## Maintenance Rules
 
 - Verify NAP, hours, founder, origin, service languages and profile URLs here

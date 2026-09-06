@@ -99,15 +99,6 @@ COMMON_I18N = {
 }
 
 PAGES = {
-    "motorcycle-service": {
-        "path": "motorcycle-service/index.html",
-        "related": [
-            ("services.s2.title", "/parts/", "Parts & consumables"),
-            ("services.s3.title", "/upgrades-tuning/", "Upgrades & tuning"),
-            ("nav.pricing", "/pricing/", "Pricing"),
-            ("nav.community", "/community/", "Community"),
-        ],
-    },
     "parts": {
         "path": "parts/index.html",
         "related": [
@@ -124,15 +115,6 @@ PAGES = {
             ("services.s2.title", "/parts/", "Parts & consumables"),
             ("services.s4.title", "/custom/", "Custom & special projects"),
             ("nav.pricing", "/pricing/", "Pricing"),
-        ],
-    },
-    "custom": {
-        "path": "custom/index.html",
-        "related": [
-            ("nav.projects", "/projects/", "Projects"),
-            ("services.s3.title", "/upgrades-tuning/", "Upgrades & tuning"),
-            ("nav.community", "/community/", "Community"),
-            ("nav.contact", "/contact/", "Contact"),
         ],
     },
 }

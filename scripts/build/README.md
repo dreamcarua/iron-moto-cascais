@@ -47,10 +47,11 @@ copy or business-semantic validation.
 | `build_news.py` | `news_data.py` | English news hub/articles | broad SEO and focused CSS-hero mode; no exact-copy validator |
 | `build_blog.py` | `blog_data.py`, approved content files | English blog hub/articles | broad SEO and focused picture-hero mode; no exact-copy validator |
 | `build_project_pages.py` | `project_pages_data.py`, approved project Markdown and localized project data | all localized project pages and noindex legacy redirects | `validate_project_pages.py` |
+| `build_service_custom_hubs.py` | approved Service/Custom hub Markdown | localized Service and Custom hubs | `validate_service_custom_hubs.py` |
 | `build_pre_purchase_inspection.py` | approved inspection Markdown | localized inspection pages | broad SEO; no exact-copy validator |
 | `build_expat_hub.py` | approved expat Markdown | localized expat hub | broad SEO; no exact-copy validator |
 | `build_harley_hub.py` | approved Harley Markdown, `harley_hub_data.py` | localized Harley family | `validate_harley_hub.py` |
-| `build_pricing.py` | `pricing_data.py`, `i18n.json`, service chrome | localized pricing HTML | broad SEO; no price-parity validator |
+| `build_pricing.py` | `pricing_data.py`, `i18n.json`, service chrome | localized pricing HTML | broad SEO plus Wave 1 metadata/price-parity checks in `validate_service_custom_hubs.py` |
 | `build_pricing_pdfs.py` | `pricing_data.py`, macOS Arial fonts | localized pricing PDFs | internal PDF assertions only |
 | `build_tyre_service.py` | approved tyre-service Markdown | localized tyre-service pages | broad SEO; no exact-copy validator |
 | `build_i18n.py` | English sources, `page_meta.py`, `i18n.json` | generic localized page variants | broad SEO and family validators |
@@ -132,6 +133,7 @@ python3 scripts/build/build_harley_hub.py
 python3 scripts/build/build_pricing.py
 python3 scripts/build/build_pricing_pdfs.py
 python3 scripts/build/build_tyre_service.py
+python3 scripts/build/build_service_custom_hubs.py
 python3 scripts/build/build_i18n.py
 python3 scripts/build/nav_patch.py
 python3 scripts/build/enhance_money_pages.py
@@ -143,6 +145,7 @@ python3 scripts/build/build_llms.py
 python3 scripts/build/validate_seo.py
 python3 scripts/build/validate_brand_pages.py
 python3 scripts/build/validate_harley_hub.py
+python3 scripts/build/validate_service_custom_hubs.py
 for slug in $(python3 -c "import sys; sys.path.insert(0, 'scripts/build'); from project_pages_data import PROJECT_CONFIGS; print(' '.join(sorted(PROJECT_CONFIGS)))"); do
   python3 scripts/build/validate_project_pages.py "$slug"
 done
@@ -247,6 +250,7 @@ node scripts/build/extract_i18n.js
 python3 scripts/build/build_new_pages.py
 python3 scripts/build/build_pre_purchase_inspection.py
 python3 scripts/build/build_tyre_service.py
+python3 scripts/build/build_service_custom_hubs.py
 python3 scripts/build/build_i18n.py
 python3 scripts/build/nav_patch.py
 python3 scripts/build/enhance_money_pages.py
@@ -255,6 +259,7 @@ python3 scripts/build/add_image_dims.py
 python3 scripts/build/apply_seo_meta.py
 python3 scripts/build/build_sitemap.py
 python3 scripts/build/build_llms.py
+python3 scripts/build/validate_service_custom_hubs.py
 python3 scripts/build/validate_seo.py
 ```
 
